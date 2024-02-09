@@ -20,8 +20,39 @@ function Header() {
   );
 }
 
+function Main() {
+  return (
+    <div className="main">
+      <div className="main-left">
+        <h1>YOUR FEET DESERVE THE BEST</h1>
+
+        <p>
+          Your feet deserve the best and we are here to help you with our shoes.
+          Your feet deserve the best and we are here to help you with our shoes.{" "}
+        </p>
+
+        <div className="buttons">
+          <button className="Category1">Shop Now</button>
+          <button className="Category">Category</button>
+        </div>
+
+        <p>Also Available On</p>
+        <img src="../src/assets/shops.png" alt="E-seller icon" />
+      </div>
+      <div className="main-right">
+        <img src="../src/assets/shoe_image.png" alt="" className="shoe" />
+      </div>
+    </div>
+  );
+}
+
 const App = () => {
-  return <div>{Header()}</div>;
+  return (
+    <div>
+      {Header()}
+      {Main()}
+    </div>
+  );
 };
 
 export default App;
