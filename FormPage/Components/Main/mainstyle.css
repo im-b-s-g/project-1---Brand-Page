@@ -77,21 +77,22 @@ button {
   justify-content: center;
 }
 
+.button-1:hover {
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.536);
+}
 .button-2 {
   color: rgb(0, 0, 0);
   background-color: rgb(255, 255, 255);
-  border: 2px solid rgba(0, 0, 0, 0.502);
+  border: 2px solid rgba(0, 0, 0, 0.521);
   border-radius: 5px;
   width: 80%;
 }
 
-.button-4 {
-  position: relative;
-  top: 7.8rem;
-  border-radius: 8px;
-  width: 50%;
-  left: -16%;
+.button-2:hover {
+  background-color: rgb(238, 255, 5);
 }
+
 .img-right {
   position: relative;
   left: 9rem;

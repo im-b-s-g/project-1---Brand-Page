@@ -8,6 +8,10 @@ import whiteChat from "../../src/assets/white.png";
 import FORMs from "../detailForm/ffoorrms";
 
 const Heading = () => {
+  const log = () => {
+    console.log("clicked");
+  };
+
   return (
     <div className="Container">
       <div className="textContent">
@@ -23,23 +27,20 @@ const Heading = () => {
       <div className="form">
         <div className="form-left">
           <div className="buttons">
-            <div className="button-1">
+            <div className="button-1" onClick={log}>
               <img src={whiteChat} alt="chatimg" />
               Via SUPPORT CHAT
             </div>
-            <div className="button-1">
+            <div className="button-1" onClick={log}>
               <img src={phone} alt="phoneimg" /> VIA CALL
             </div>
           </div>
-
-          <div className="button-1 button-2 ">
+          <div className="button-1 button-2 " onClick={log}>
             <img src={blackChat} alt="" />
             VIA E-MAIL FORM
           </div>
           <FORMs />
-          <button className="button-4">SUBMIT</button>
         </div>
-
         <div className="img-right">
           <img src={service} alt="serviceImg" />
         </div>
