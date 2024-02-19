@@ -1,29 +1,37 @@
+/* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
 import React from "react";
 import { useState } from "react";
-import { updateValue, totalScore } from "../score";
 import "./top.css";
 
-const Top = () => {
-  var error = "";
+const Top = ({ score, radioSelected, errors }) => {
+  const handleSelection = (e) => {
+    radioSelected(e.target.value);
+    e.target.checked = true;
+  };
 
-  var score = 0;
+  const handleCurrency = () => {
+    if (score < 0) return "-₹" + -score;
+    else return "₹" + score;
+  };
 
   return (
     <div className="top-comp">
       <div className="top-left">
-        <h1>{score}</h1>
-        <p>Total Score</p>
+        <h1>{handleCurrency()}</h1>
+        <p>Total Earnings</p>
       </div>
 
       <div className="top-right">
-        <p id="alertText">{error}</p>
+        <p id="alertText">{errors}</p>
+
         <div className="options">
           <input
             type="radio"
             id="1"
             value="1"
             name="choice"
+            onChange={handleSelection}
             className="input-hidden"
           />
           <label htmlFor="1">
@@ -35,6 +43,7 @@ const Top = () => {
             id="2"
             value="2"
             name="choice"
+            onChange={handleSelection}
             className="input-hidden"
           />
           <label htmlFor="2">
@@ -46,6 +55,7 @@ const Top = () => {
             id="3"
             value="3"
             name="choice"
+            onChange={handleSelection}
             className="input-hidden"
           />
           <label htmlFor="3">
@@ -57,6 +67,7 @@ const Top = () => {
             id="4"
             value="4"
             name="choice"
+            onChange={handleSelection}
             className="input-hidden"
           />
           <label htmlFor="4">
@@ -68,6 +79,7 @@ const Top = () => {
             id="5"
             value="5"
             name="choice"
+            onChange={handleSelection}
             className="input-hidden"
           />
           <label htmlFor="5">
@@ -79,6 +91,7 @@ const Top = () => {
             id="6"
             value="6"
             name="choice"
+            onChange={handleSelection}
             className="input-hidden"
           />
           <label htmlFor="6">

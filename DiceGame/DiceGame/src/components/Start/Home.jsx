@@ -1,8 +1,13 @@
+// eslint-disable-next-line no-unused-vars
 import React from "react";
 import homeDiceImg from "../../assets/dices 1.png";
 import "./home.css";
 
-const Header = () => {
+// eslint-disable-next-line react/prop-types
+const Header = ({ clicked }) => {
+  const HandleClick = () => {
+    clicked(1);
+  };
   return (
     <div className="main">
       <div className="left">
@@ -10,7 +15,9 @@ const Header = () => {
       </div>
       <div className="right">
         <h1>DICE GAME </h1>
-        <button className="button-1">PLAY NOW</button>
+        <button className="button-1" onClick={HandleClick}>
+          PLAY NOW
+        </button>
       </div>
     </div>
   );

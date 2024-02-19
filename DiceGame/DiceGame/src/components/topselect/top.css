@@ -44,7 +44,8 @@
 }
 
 #alertText {
-  color: rgb(104, 2, 2);
+  color: rgb(227, 5, 5);
+  font-weight: 100;
 }
 
 label {
@@ -64,5 +65,7 @@ label:hover {
 }
 
 input[type="radio"]:checked + label {
+  background-color: black;
+  color: white;
   box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.581);
 }
